@@ -1,10 +1,9 @@
 let rows=document.querySelector("#output");
-let row1 = document.createElement("tr");
-	let c1 = document.createElement("td");
-	c1.setAttribute("colspan", 2);
-	c1.innerText="Loading...";
-	row1.appendChild(c1);
-	rows.appendChild(row1);
+
+	rows.innerHTML=
+		`<tr>
+		  <td colspan=2>Loading...</td>
+		  </tr>`;
 
 let p1 = new Promise((resolve,reject)=>{
 	let time1=Math.random()*3+1;
