@@ -1,26 +1,26 @@
 let rows=document.querySelector("#output");
 
 	rows.innerHTML=
-		`<tr>
-		  <td colspan=2>Loading...</td>
+		`<tr id="loading">
+		  <td colspan=2 >Loading...</td>
 		  </tr>`;
 
 let p1 = new Promise((resolve,reject)=>{
-	let time1=Math.random()*3+1;
+	let time1=Math.random()*2+1;
 	setTimeout(()=>{
 		resolve(time1);
 	},time1*1000);
 });
 
 let p2 = new Promise((resolve,reject)=>{
-	let time2=Math.random()*3+1;
+	let time2=Math.random()*2+1;
 	setTimeout(()=>{
 		resolve(time2);
 	},time2*1000);
 });
 
 let p3 = new Promise((resolve,reject)=>{
-	let time3=Math.random()*3+1;
+	let time3=Math.random()*2+1;
 	setTimeout(()=>{
 		resolve(time3);
 	},time3*1000);
